@@ -1,6 +1,6 @@
 # Java File Hider - Console Based Project
 
-![File Hider](file_hider_image.jpg)
+
 
 ## Overview
 
@@ -45,9 +45,7 @@ To contribute or use this project locally, follow these steps:
 4. Make modifications or improvements to the code.
 5. Compile and test your changes.
 
-## Demo
 
-You can find a demo of the Java File Hider in action [here](demo_video_link).
 
 ## Contributing
 
