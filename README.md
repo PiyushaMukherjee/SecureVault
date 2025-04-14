@@ -1,52 +1,58 @@
-# Java File Hider - Console Based Project
+# Save the finalized README.md with all content merged into a single, formal document
+full_readme = """
+# 🔒 Secure File Hiding System with OTP Verification (Java + MySQL)
 
+A Java-based desktop application designed to enable users to securely hide, reveal, and manage sensitive files with an additional layer of OTP-based email verification. This application leverages technologies such as JavaMail API, MySQL, and Maven to offer a robust and privacy-focused file management system.
 
+---
 
-## Overview
+## 📌 Features
 
-This repository contains a Java console-based project that allows users to hide and unhide files in a directory by leveraging basic file manipulation techniques. The goal of this project is to provide a simple way to hide sensitive files from plain view using the command-line interface.
+- ✅ User registration and login secured with OTP verification via email
+- 🔐 Encrypts and stores files securely in the database
+- 📂 Allows users to unhide and restore files to their original location
+- 📬 Sends OTP emails using JavaMail API and Gmail App Password
+- 🗃️ Utilizes MySQL for storing user and file metadata
+- ⚙️ Built with Maven for streamlined dependency management and portability
 
-## Table of Contents
+---
 
-- [Project Description](#project-description)
-- [Features](#features)
-- [Usage](#usage)
-- [Getting Started](#getting-started)
-- [Demo](#demo)
-- [Contributing](#contributing)
+## 🛠️ Tech Stack
 
-## Project Description
+| Layer         | Technology         |
+|---------------|--------------------|
+| Language      | Java               |
+| Database      | MySQL              |
+| Email Service | JavaMail API (SMTP)|
+| Build Tool    | Maven              |
+| IDE           | IntelliJ IDEA      |
 
-The Java File Hider project focuses on providing a command-line utility to hide files within a designated directory. It uses basic file renaming techniques to make the files less conspicuous to regular users. Users can also unhide files that were previously hidden using the tool.
+---
 
-## Features
+## 🔧 Setup Instructions
 
-- Hide files within a specified directory.
-- Unhide previously hidden files.
-- List hidden files in the directory.
-- Simple and intuitive command-line interface.
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/secure-file-hider.git
+cd secure-file-hider
+CREATE DATABASE securefiledb;
+USE securefiledb;
 
-## Usage
+CREATE TABLE user (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE
+);
 
-1. Clone this repository: `git clone https://github.com/your-username/java-file-hider.git`
-2. Navigate to the project directory: `cd java-file-hider`
-3. Compile the Java source files: `javac FileHider.java`
-4. Run the program: `java FileHider`
-
-Follow the on-screen instructions to hide, unhide, or list hidden files in the directory.
-
-## Getting Started
-
-To contribute or use this project locally, follow these steps:
-
-1. Clone the repository as mentioned in the Usage section.
-2. Set up your development environment with Java.
-3. Explore the source code in `FileHider.java`.
-4. Make modifications or improvements to the code.
-5. Compile and test your changes.
-
-
-
-## Contributing
-
-Contributions to this project are welcome! If you have suggestions for improvements, bug fixes, or new features, please feel free to open an issue or submit a pull request.
+CREATE TABLE data (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255),
+    path VARCHAR(500),
+    email VARCHAR(100),
+    bin_data LONGTEXT
+);
+String url = "jdbc:mysql://localhost:3306/securefiledb";
+String user = "root";
+String password = "your_mysql_password";
+return new PasswordAuthentication(from, "your_app_password");
+mvn clean compile
