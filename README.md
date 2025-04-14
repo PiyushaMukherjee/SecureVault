@@ -1,19 +1,14 @@
-# Save the finalized README.md with all content merged into a single, formal document
-full_readme = """
-# 🔒 Secure File Hiding System with OTP Verification (Java + MySQL)
+#Secure File Hiding System with OTP Verification (Java + MySQL)
+This is a Java-based desktop application that enables users to securely hide, reveal, and manage sensitive files with OTP-based email verification. The application employs JavaMail API for email services, MySQL for data storage, and Maven as the build tool, ensuring a secure and structured approach to file management.
 
-A Java-based desktop application designed to enable users to securely hide, reveal, and manage sensitive files with an additional layer of OTP-based email verification. This application leverages technologies such as JavaMail API, MySQL, and Maven to offer a robust and privacy-focused file management system.
+## Features
 
----
-
-## 📌 Features
-
-- ✅ User registration and login secured with OTP verification via email
-- 🔐 Encrypts and stores files securely in the database
-- 📂 Allows users to unhide and restore files to their original location
-- 📬 Sends OTP emails using JavaMail API and Gmail App Password
-- 🗃️ Utilizes MySQL for storing user and file metadata
-- ⚙️ Built with Maven for streamlined dependency management and portability
+- User registration and login with OTP verification via email
+- Secure file hiding using encryption and database storage
+- File restoration to the original path upon unhide
+- Email-based OTP functionality using JavaMail API and Gmail App Password
+- Persistent storage of user and file data using MySQL
+- Built using Maven for efficient dependency management
 
 ---
 
